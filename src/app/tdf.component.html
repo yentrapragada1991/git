@@ -1,0 +1,18 @@
+<form #mygroup="ngForm">
+  <div style="font-size: x-large">
+    firstname:<input name="firstname" [(ngModel)]="firstname" required>
+    <span *ngIf="mygroup.controls.firstname.invalid">
+        enter first name
+      </span>
+      <br>
+      lastname:<input name="lastname" [(ngModel)]="lastname" required>
+      <span *ngIf="mygroup.controls.lastname.invalid">
+        enter last name
+      </span>
+      <br>
+      <input type="button" value="register" (click)="register(mygroup)">
+      <br>
+      {{msg}}
+  </div>
+
+</form>

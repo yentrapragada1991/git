@@ -1,0 +1,32 @@
+<style>
+  span{
+    color:red;
+
+  }
+</style>
+<!--Binding formGroup And formControlName To Form-->
+<form [formGroup]="myform" (ngSubmit)="register()">
+  <div style="font-size: x-large">
+    firstname:<input formControlName="firstname">
+    <span *ngIf="myform.controls.firstname.invalid">
+      entername
+    </span>
+  
+  <br>
+  lastname:<input formControlName="lastname">
+  <span *ngIf="myform.controls.lastname.invalid"> 
+  enter last name
+</span>
+<br>
+emailid:<input formControlName="emailid">
+<span *ngIf="myform.controls.emailid.invalid">
+  enter valid email
+</span>
+<br>
+<input type="submit" value="register">
+<br>
+{{msg}}
+<br>
+{{myform.value|json}}
+</div>
+</form>

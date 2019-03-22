@@ -1,0 +1,19 @@
+
+
+
+<div *ngIf="displayname; then template1; else template2"></div>
+
+
+<ng-template #template1>
+  <ul>
+    <li>hi</li>
+    <li>h r u</li>
+  </ul>
+  
+</ng-template>
+<ng-template #template2>
+  <h1>hello</h1>
+</ng-template>
+
+
+

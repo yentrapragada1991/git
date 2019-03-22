@@ -1,0 +1,55 @@
+<h1>{{inputtext}}</h1>
+
+<!--
+    style binding
+-->
+<button [style.color]="textcolour">click me</button>
+<br>
+<!--
+    proprty binding with inline style and to set an
+    element property to non string value(boolean type) we must use propety binding
+    and style binding has been used
+-->
+<button style="color:green" [style.font-weight]="isbold? 'bold':normal">click</button>
+<br>
+<br>
+
+
+<button style="color:blue"[style.font-size.px]="fontsize">clickme</button>
+<br>
+
+
+
+<br>
+
+<input type="text" [(ngModel)]="inputtext">
+
+
+<br>
+
+<br>
+you eneterd:{{inputtext}}
+
+<br>
+<hr>
+<div>
+     <h1>{{user.name}}</h1>
+    <h3>{{user.designation}}</h3>  
+    <p>{{user.place}}</p>
+    <p>{{user.pincode}}</p>
+    <p>{{user.phone}}</p>
+    <div>
+        <p>phone:</p>
+        <p *ngFor="let phonenumber of user.phone">{{phonenumber}}</p>
+    </div>
+</div>
+<hr>
+
+
+
+
+
+
+
+
+

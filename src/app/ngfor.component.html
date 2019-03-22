@@ -1,0 +1,14 @@
+<ul style="font-size: x-large">
+
+  <li *ngFor="let c of course;let isodd=odd;
+  let iseven=even">
+  <span style="color:red" *ngIf="isodd">
+    {{c}}
+  </span>
+  <span style="color:green" *ngIf="iseven">
+    {{c}}
+  </span>
+</li>
+</ul>
+<hr>
+<h2 [style.color]="color">style binding is used to apply in line style</h2>

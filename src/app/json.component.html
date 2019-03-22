@@ -1,0 +1,30 @@
+<h2>Faculty name:{{facultyinfo.name}}</h2>
+<ul style="font-size: x-large">
+  <li *ngFor="let c of facultyinfo.course">
+  {{c}}
+  </li>
+</ul>
+<hr>
+<table style="font-size: x-large" border="1px">
+  <tr>
+    <th>sno</th>
+    <th>pid</th>
+    <th>name</th>
+    <th>price</th>
+    <th>pic</th>
+  </tr>
+  <tr *ngFor="let p of prods; let i=index">
+   <td> {{i+1}}</td>
+    <td>
+      {{p.pid}}
+    </td>
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>
+      <img src=".\src\images\{{p.pic}}" width="100  " height="100" />
+    </td>
+
+    
+  </tr>
+
+</table>
